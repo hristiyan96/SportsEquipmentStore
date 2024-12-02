@@ -1,0 +1,25 @@
+﻿@model SportsEquipmentStore.Models.OrderItem
+
+<h1>Edit Order Item</h1>
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="OrderId"></label>
+        <select asp-for="OrderId" asp-items="@(new SelectList(ViewBag.Orders, "Id", "Id", Model.OrderId))" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="EquipmentId"></label>
+        <select asp-for="EquipmentId" asp-items="@(new SelectList(ViewBag.Equipments, "Id", "Name", Model.EquipmentId))" class="form-control"></select>
+    </div>
+    <div class="form-group">
+        <label asp-for="Quantity"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Price"></label>
+        <input asp-for="Price" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>

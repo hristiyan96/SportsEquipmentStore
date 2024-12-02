@@ -1,0 +1,33 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.OrderItem>
+
+<h1>Order Items</h1>
+<a asp-action="Create" class="btn btn-primary">Add New Order Item</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order</th>
+            <th>Equipment</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Total Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Order.Id</td>
+                <td>@item.Equipment.Name</td>
+                <td>@item.Quantity</td>
+                <td>@item.Price.ToString("C")</td>
+                <td>@(item.Quantity * item.Price).ToString("C")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-secondary btn-sm">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
