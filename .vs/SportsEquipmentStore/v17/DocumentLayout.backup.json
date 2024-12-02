@@ -238,8 +238,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 9,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -250,8 +258,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:59:58.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:59:58.202Z"
             },
             {
               "$type": "Document",
@@ -299,8 +306,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\Controllers\\BrandController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:54:57.693Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:54:57.693Z"
             },
             {
               "$type": "Document",
@@ -312,8 +318,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\Views\\_ViewStart.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T15:02:05.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:02:05.787Z"
             },
             {
               "$type": "Document",
@@ -325,8 +330,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-12-02T14:03:52.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T14:03:52.396Z"
             },
             {
               "$type": "Document",
@@ -336,7 +340,7 @@
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\CategoryController.cs",
               "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\CategoryController.cs",
               "RelativeToolTip": "SportsEquipmentStore\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowDkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T13:53:38.57Z",
               "EditorCaption": ""
@@ -351,8 +355,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABsAAAAAAAAAAAAAACcAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T15:00:06.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T15:00:06.732Z"
             },
             {
               "$type": "Document",
@@ -364,8 +367,7 @@
               "RelativeToolTip": "SportsEquipmentStore\\Data\\SportsEquipmentContext.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAYwFEAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:59:00.516Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-02T13:59:00.516Z"
             },
             {
               "$type": "Document",
