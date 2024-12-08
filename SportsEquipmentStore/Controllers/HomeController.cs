@@ -17,5 +17,10 @@ namespace SportsEquipmentStore.Controllers
 
         return View(categories);
         }
+        public IActionResult Contact()
+        {
+          return View();
+        }
+
     }
 }
