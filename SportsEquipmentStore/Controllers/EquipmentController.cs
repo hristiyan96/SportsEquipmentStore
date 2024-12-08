@@ -48,6 +48,18 @@ namespace SportsEquipmentStore.Controllers
 
     return View(query.ToList());
 }
+public IActionResult Details(int id)
+{
+    var equipment = _context.Equipments
+        .Include(e => e.Category)
+        .FirstOrDefault(e => e.Id == id);
+
+    if (equipment == null)
+        return NotFound();
+
+    return View(equipment);
+}
+
 
 
 
