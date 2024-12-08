@@ -26,6 +26,14 @@ namespace SportsEquipmentStore.Controllers
             ViewBag.Brands = _context.Brands.ToList();
             return View();
         }
+        public IActionResult Search(string query)
+    {
+    var results = _context.Equipments
+        .Where(e => e.Name.Contains(query) || e.Description.Contains(query))
+        .ToList();
+    return View(results);
+    }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
