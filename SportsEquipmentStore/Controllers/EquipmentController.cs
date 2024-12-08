@@ -59,7 +59,15 @@ public IActionResult Details(int id)
 
     return View(equipment);
 }
-
+public IActionResult Index(int page = 1)
+{
+    int pageSize = 5;
+    var equipments = _context.Equipments
+        .Skip((page - 1) * pageSize)
+        .Take(pageSize)
+        .ToList();
+    return View(equipments);
+}
 
 
 
