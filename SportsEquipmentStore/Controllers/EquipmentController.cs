@@ -26,6 +26,42 @@ namespace SportsEquipmentStore.Controllers
             ViewBag.Brands = _context.Brands.ToList();
             return View();
         }
+        public IActionResult Search(string query)
+        {
+            var results = _context.Equipments
+                .Where(e => e.Name.Contains(query) || e.Description.Contains(query))
+                .ToList();
+            return View(results);
+        }
+        public IActionResult Filter(int? categoryId, decimal? minPrice, decimal? maxPrice)
+        {
+            var query = _context.Equipments.AsQueryable();
+
+            if (categoryId.HasValue)
+                query = query.Where(e => e.CategoryId == categoryId);
+
+            if (minPrice.HasValue)
+                query = query.Where(e => e.Price >= minPrice);
+
+            if (maxPrice.HasValue)
+                query = query.Where(e => e.Price <= maxPrice);
+
+            return View(query.ToList());
+        }
+        public IActionResult Details(int id)
+        {
+            var equipment = _context.Equipments
+                .Include(e => e.Category)
+                .FirstOrDefault(e => e.Id == id);
+
+            if (equipment == null)
+                return NotFound();
+
+            return View(equipment);
+        }
+
+
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
