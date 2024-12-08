@@ -1,2 +1,12 @@
-﻿<h1>Welcome to Sports Equipment Store!</h1>
+﻿@model IEnumerable<SportsEquipmentStore.Models.Category>
+
+<h1>Categories</h1>
+<ul>
+    @foreach (var category in Model)
+    {
+        <li>@category.Name - @category.Description</li>
+    }
+</ul>
+
+<h1>Welcome to Sports Equipment Store!</h1>
 <p>Browse our collection of sports equipment and accessories.</p>
