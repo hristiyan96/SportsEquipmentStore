@@ -4,3 +4,17 @@
 <p>Category: @Model.Category.Name</p>
 <p>Description: @Model.Description</p>
 <p>Price: $@Model.Price</p>
+<h2>Reviews</h2>
+@if (Model.Reviews.Any())
+{
+    <ul>
+        @foreach (var review in Model.Reviews)
+        {
+            <li>@review.Rating/5 - @review.Comment</li>
+        }
+    </ul>
+}
+else
+{
+    <p>No reviews yet.</p>
+}
