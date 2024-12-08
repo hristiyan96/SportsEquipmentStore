@@ -4,6 +4,8 @@ namespace SportsEquipmentStore.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly LoggingService _logger = new LoggingService();
+
         public IActionResult Index()
         {
          var categories = new List<Category>
