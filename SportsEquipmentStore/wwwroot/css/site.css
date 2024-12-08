@@ -22,12 +22,12 @@ body {
     transition: color 0.3s;
 }
 
-    .navbar-nav .nav-link:hover {
+ .navbar-nav .nav-link:hover {
         color: #ffc107 !important;
     }
 
 
-    .navbar-nav .nav-link:hover {
+  .navbar-nav .nav-link:hover {
         color: #ffc107 !important; /* Golden yellow */
     }
 
