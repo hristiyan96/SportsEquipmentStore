@@ -1,0 +1,8 @@
+public class LoggingService
+{
+    public void LogError(string message, Exception ex)
+    {
+        // Simple logging to a file (extend as needed)
+        File.AppendAllText("error.log", $"{DateTime.Now}: {message} - {ex.Message}{Environment.NewLine}");
+    }
+}
