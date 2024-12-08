@@ -1,0 +1,22 @@
+@model IEnumerable<SportsEquipmentStore.Models.Equipment>
+
+<h1>Filter Products</h1>
+<form method="get">
+    <select name="categoryId" class="form-select">
+        <option value="">All Categories</option>
+        @foreach (var category in ViewBag.Categories)
+        {
+            <option value="@category.Id">@category.Name</option>
+        }
+    </select>
+    <input type="number" name="minPrice" placeholder="Min Price" class="form-control" />
+    <input type="number" name="maxPrice" placeholder="Max Price" class="form-control" />
+    <button type="submit" class="btn btn-primary">Filter</button>
+</form>
+
+<ul>
+    @foreach (var equipment in Model)
+    {
+        <li>@equipment.Name - $@equipment.Price</li>
+    }
+</ul>
