@@ -33,6 +33,22 @@ namespace SportsEquipmentStore.Controllers
         .ToList();
     return View(results);
     }
+    public IActionResult Filter(int? categoryId, decimal? minPrice, decimal? maxPrice)
+{
+    var query = _context.Equipments.AsQueryable();
+
+    if (categoryId.HasValue)
+        query = query.Where(e => e.CategoryId == categoryId);
+
+    if (minPrice.HasValue)
+        query = query.Where(e => e.Price >= minPrice);
+
+    if (maxPrice.HasValue)
+        query = query.Where(e => e.Price <= maxPrice);
+
+    return View(query.ToList());
+}
+
 
 
         [HttpPost]
