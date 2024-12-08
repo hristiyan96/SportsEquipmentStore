@@ -17,6 +17,7 @@ builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 
+app.UseStatusCodePagesWithReExecute("/Home/Error404");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
