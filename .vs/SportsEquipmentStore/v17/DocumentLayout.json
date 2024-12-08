@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
@@ -49,14 +57,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\views\\brand\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\views\\brand\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|solutionrelative:sportsequipmentstore\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A64117C-2C3F-42BA-8D11-EE620606587C}|SportsEquipmentStore\\SportsEquipmentStore.csproj|c:\\users\\hv\\source\\repos\\sportsequipmentstore\\sportsequipmentstore\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -238,7 +238,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -247,30 +247,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "BrandController.cs",
-              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\BrandController.cs",
-              "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\BrandController.cs",
-              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\BrandController.cs",
-              "RelativeToolTip": "SportsEquipmentStore\\Controllers\\BrandController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T13:54:57.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "SportsEquipmentStore\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T15:02:05.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\appsettings.json",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\appsettings.json",
@@ -282,7 +258,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\CategoryController.cs",
@@ -295,20 +271,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\wwwroot\\css\\site.css",
               "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\wwwroot\\css\\site.css",
               "RelativeToolTip": "SportsEquipmentStore\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABkAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2024-12-02T15:03:11.949Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\wwwroot\\js\\site.js",
@@ -332,7 +308,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Program.cs",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Program.cs",
@@ -344,20 +320,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "SportsEquipmentStore\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAADMAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-12-02T15:00:06.732Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "SportsEquipmentContext.cs",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Data\\SportsEquipmentContext.cs",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Data\\SportsEquipmentContext.cs",
@@ -369,7 +345,57 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "SportsEquipmentStore\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T14:56:33.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "SportsEquipmentStore\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T14:57:29.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "SportsEquipmentStore\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-02T15:02:05.787Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "BrandController.cs",
+              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\BrandController.cs",
+              "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\BrandController.cs",
+              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\BrandController.cs",
+              "RelativeToolTip": "SportsEquipmentStore\\Controllers\\BrandController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-02T13:54:57.693Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "CustomerController.cs",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\CustomerController.cs",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\CustomerController.cs",
@@ -381,7 +407,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "SupplierController.cs",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\SupplierController.cs",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\SupplierController.cs",
@@ -442,30 +468,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "SportsEquipmentStore\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "SportsEquipmentStore\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T14:56:33.878Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "SportsEquipmentStore\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-12-02T14:57:29.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\HV\\source\\repos\\SportsEquipmentStore\\SportsEquipmentStore\\Views\\Brand\\Index.cshtml",
               "RelativeDocumentMoniker": "SportsEquipmentStore\\Views\\Brand\\Index.cshtml",
