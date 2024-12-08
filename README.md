@@ -1,1 +1,21 @@
-The Sports Equipment Store is a web application built using ASP.NET Core MVC. It allows users to browse, purchase, and manage sports equipment for various categories, including fitness, outdoor sports, and water sports. The application features functionalities such as category management, product listing, customer reviews, order management, and more. It uses Entity Framework Core for database operations and supports a user-friendly interface for seamless navigation and shopping experience.
+# Sports Equipment Store
+
+An ASP.NET Core MVC application for managing sports equipment sales. Users can browse products, view details, add items to a cart, and complete purchases. Includes admin tools for managing categories, products, and orders.
+
+## Features
+- Product management
+- Category-based browsing
+- Shopping cart and checkout
+- Customer authentication
+- Responsive design
+
+## How to Run
+1. Clone this repository.
+2. Run `dotnet restore` to install dependencies.
+3. Use `dotnet run` to start the application.
+
+## Technologies
+- ASP.NET Core MVC
+- Entity Framework Core
+- SQL Server
+- Bootstrap
