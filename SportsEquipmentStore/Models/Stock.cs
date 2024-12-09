@@ -10,7 +10,3 @@
         public int Quantity { get; set; }
     }
 }
-public IActionResult Contact()
-{
-    return View();
-}
