@@ -41,5 +41,8 @@ namespace SportsEquipmentStore.Controllers
             ViewBag.Equipments = _context.Equipments.ToList();
             return View(orderItem);
         }
+        Remove-Migration
+Add-Migration ResetUserDestinations
+Update-Database
     }
 }
