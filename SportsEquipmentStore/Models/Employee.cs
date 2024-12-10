@@ -22,4 +22,7 @@ namespace SportsEquipmentStore.Models
 
         public DateTime HireDate { get; set; }
     }
+    Remove-Migration
+Add-Migration ResetUserDestinations
+Update-Database
 }
