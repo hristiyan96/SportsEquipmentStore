@@ -140,31 +140,7 @@ public IActionResult Index(int page = 1)
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        [HttpPost]
-[Authorize]
-public IActionResult AddToFavorites(int id)
-{
-    var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-    // Check if the user has already added this destination to their favorites
-    var existingFavorite = _context.UserDestinations
-        .FirstOrDefault(ud => ud.UserId == userId && ud.DestinationId == id);
-
-    if (existingFavorite == null)
-    {
-        var userDestination = new UserDestination
-        {
-            UserId = userId,
-            DestinationId = id
-        };
-
-        _context.UserDestinations.Add(userDestination);
-        _context.SaveChanges();
-    }
-
-    // Redirect back to the destinations page
-    return RedirectToAction("Index");
-}
+       
 
     }
 }
