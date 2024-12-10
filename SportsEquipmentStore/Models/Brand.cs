@@ -15,7 +15,5 @@ namespace SportsEquipmentStore.Models
 
         public ICollection<Equipment> Equipments { get; set; }
     }
-    Remove-Migration
-Add-Migration ResetUserDestinations
-Update-Database
+    
 }
