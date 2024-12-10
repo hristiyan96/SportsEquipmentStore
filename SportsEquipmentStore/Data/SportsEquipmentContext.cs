@@ -81,9 +81,7 @@ namespace SportsEquipmentStore.Data
                 new Stock { Id = 3, EquipmentId = 3, Quantity = 50 },
                 new Stock { Id = 4, EquipmentId = 4, Quantity = 15 }
             );
-            Remove-Migration
-Add-Migration ResetUserDestinations
-Update-Database
+           
         }
     }
 }
