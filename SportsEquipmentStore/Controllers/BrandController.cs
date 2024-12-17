@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SportsEquipmentStore.Data;
 using SportsEquipmentStore.Models;
@@ -14,77 +14,40 @@ namespace SportsEquipmentStore.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> ProductsByBrand(string brandName)
         {
-            return View(await _context.Brands.ToListAsync());
-        }
+            if (string.IsNullOrEmpty(brandName))
+                return NotFound();
 
-        public IActionResult Create()
-        {
-            return View();
-        }
+            // Ensure brandName filtering is case-insensitive and exact
+            var products = await _context.Products
+                .Include(p => p.Brand)
+                .Where(p => p.Brand.Name.ToLower() == brandName.ToLower())
+                .ToListAsync();
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Brand brand)
-        {
-            if (ModelState.IsValid)
+            if (products == null || !products.Any())
             {
-                _context.Add(brand);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                ViewData["BrandName"] = brandName;
+                return View("ProductsPlaceholder");
             }
-            return View(brand);
+
+            ViewData["BrandName"] = brandName;
+            return View(products);
         }
 
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> ProductDetails(int id)
         {
-            if (id == null)
-                return NotFound();
+            var product = await _context.Products
+                .Include(p => p.Brand) // Include Brand details
+                .FirstOrDefaultAsync(p => p.Id == id);
 
-            var brand = await _context.Brands.FindAsync(id);
-            if (brand == null)
-                return NotFound();
-
-            return View(brand);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, Brand brand)
-        {
-            if (id != brand.Id)
-                return NotFound();
-
-            if (ModelState.IsValid)
+            if (product == null)
             {
-                _context.Update(brand);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return NotFound(); // Handle missing product
             }
-            return View(brand);
+
+            return View(product); // Pass the product to the ProductDetails view
         }
 
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-                return NotFound();
-
-            var brand = await _context.Brands.FindAsync(id);
-            if (brand == null)
-                return NotFound();
-
-            return View(brand);
-        }
-
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
-        {
-            var brand = await _context.Brands.FindAsync(id);
-            _context.Brands.Remove(brand);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
-        }
     }
 }
