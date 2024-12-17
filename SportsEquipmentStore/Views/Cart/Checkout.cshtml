@@ -1,0 +1,93 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Checkout";
+    var totalPrice = Model.Sum(p => p.Price) ?? 0.0M; // Total Price Calculation
+}
+
+<h1>Checkout</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">Your cart is empty.</div>
+}
+else
+{
+    <!-- Table to Display Cart Products -->
+    <div class="table-responsive mb-3">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td>$@product.Price?.ToString("0.00")</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Total Amount -->
+    <div class="mb-4">
+        <h4 class="fw-bold">Total: $@totalPrice.ToString("0.00")</h4>
+    </div>
+
+    
+        <!-- Credit/Debit Card Payment (Stripe) -->
+        <div class="col-md-6 mb-3">
+            <h5>Pay with Credit/Debit Card</h5>
+            <form id="stripe-payment-form" method="post" asp-action="StripePayment">
+                <div id="card-element" class="form-control mb-3"></div>
+                <button type="submit" class="btn btn-success btn-lg w-100">
+                    <i class="bi bi-credit-card"></i> Pay with Card
+                </button>
+                <p id="error-message" class="text-danger mt-2"></p>
+            </form>
+        </div>
+    
+}
+
+<!-- Stripe Script -->
+<!-- Include Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    // Initialize Stripe with your publishable key
+    var stripe = Stripe('pk_test_51QX4BxCGJvUPRNYlPrGkbWv3ufcfGqVTDjx5rcE3XclwlBTEpJzQVdAIGKWZ0seyeU1IXlGwCld5HkkbcJQx3FcO00JXopXfwZ'); // Replace with your actual key
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+
+    // Mount the card input field
+    cardElement.mount('#card-element');
+
+    // Handle form submission
+    var form = document.getElementById('stripe-payment-form');
+    var errorElement = document.getElementById('error-message');
+
+    form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+
+        const { error, paymentIntent } = await stripe.confirmCardPayment('@ViewBag.ClientSecret', {
+            payment_method: {
+                card: cardElement,
+            }
+        });
+
+        if (error) {
+            // Display error message
+            errorElement.textContent = error.message;
+        } else {
+            // Payment successful, redirect to success page
+            alert('Payment successful!');
+            window.location.href = '/Cart/PaymentSuccess';
+        }
+    });
+</script>

@@ -1,0 +1,39 @@
+﻿@model SportsEquipmentStore.Models.Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<div class="container mt-4">
+    <div class="row">
+        <!-- Product Image -->
+        <div class="col-md-6">
+            <img src="@(!string.IsNullOrEmpty(Model.ImageUrl) ? Model.ImageUrl : "/images/default.jpg")"
+                 class="img-fluid" alt="@Model.Name" />
+        </div>
+
+        <!-- Product Details -->
+        <div class="col-md-6">
+            <h1>@Model.Name</h1>
+            <p class="text-muted">@Model.Description</p>
+            <p class="fw-bold text-danger">Price: $@Model.Price?.ToString("F2")</p>
+
+            <a asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@Model.Id" class="btn btn-success">
+                Add to Cart
+            </a>
+
+            <!-- Brand -->
+            <p>Brand: @(Model.Brand?.Name ?? "No brand")</p>
+
+            <!-- Add to Favorites Button -->
+            <form method="post" asp-controller="Favorite" asp-action="AddToFavorite">
+                <input type="hidden" name="productId" value="@Model.Id" />
+                <button type="submit" class="btn btn-outline-danger">
+                    <i class="bi bi-heart"></i> Add to Favorites
+                </button>
+            </form>
+        </div>
+    </div>
+    <a asp-controller="Brand" asp-action="ProductsByBrand" asp-route-brandName="@Model.Brand.Name"
+       class="btn btn-secondary mt-3">Back to @Model.Brand.Name</a>
+</div>

@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.Product>
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<h1>Shopping Cart</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">
+        Your cart is empty. <a href="/">Continue shopping</a>.
+    </div>
+}
+else
+{
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model)
+                {
+                    <tr>
+                        <td>@product.Name</td>
+                        <td>@product.Description</td>
+                        <td>$@product.Price?.ToString("0.00")</td>
+                        <td>
+                            <!-- Remove Button -->
+                            <form method="post" asp-action="Remove" asp-route-productId="@product.Id">
+                                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <div class="mt-3">
+        <!-- Clear Cart Button -->
+        <form method="post" asp-action="Clear">
+            <button type="submit" class="btn btn-warning">Clear Cart</button>
+        </form>
+
+        <!-- Proceed to Checkout Button -->
+        <a asp-action="Checkout" class="btn btn-success">Proceed to Checkout</a>
+
+        <!-- Continue Shopping -->
+        <a href="/" class="btn btn-primary">Continue Shopping</a>
+    </div>
+}

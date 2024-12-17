@@ -1,0 +1,29 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.Favorite>
+
+<h1>Your Favorite Products</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">You have no favorite products.</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var favorite in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <img src="@favorite.Product.ImageUrl" class="card-img-top" alt="@favorite.Product.Name" />
+                    <div class="card-body">
+                        <h5 class="card-title">@favorite.Product.Name</h5>
+                        <p class="text-danger fw-bold">$@favorite.Product.Price</p>
+                        <form method="post" asp-controller="Favorite" asp-action="Remove">
+                            <input type="hidden" name="favoriteId" value="@favorite.Id" />
+                            <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

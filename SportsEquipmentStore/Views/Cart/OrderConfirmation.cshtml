@@ -1,0 +1,17 @@
+﻿@model SportsEquipmentStore.Models.Order
+
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h1>Order Confirmation</h1>
+<p>Thank you for your purchase!</p>
+
+<div class="alert alert-success">
+    <p>Order ID: <strong>@Model.Id</strong></p>
+    <p>Order Date: <strong>@Model.OrderDate.ToShortDateString()</strong></p>
+    <p>Total Amount: <strong>$@Model.TotalAmount.ToString("0.00")</strong></p>
+    <p>Payment Method: <strong>@Model.PaymentMethod</strong></p>
+</div>
+
+<a href="/" class="btn btn-primary">Back to Home</a>

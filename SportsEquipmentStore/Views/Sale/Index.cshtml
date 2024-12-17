@@ -1,0 +1,51 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.Product>
+
+<h1 class="mb-4">Sale Products</h1>
+
+<div class="row">
+    @foreach (var product in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <a asp-controller="Sale" asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none text-dark">
+                <div class="card h-100 shadow-sm">
+                    <!-- Product Image -->
+                    <img src="@Url.Content(product.ImageUrl)" alt="@product.Name" class="card-img-top" style="height: 200px; object-fit: cover;" />
+
+                    <!-- Product Details -->
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text">@product.Description</p>
+
+                        @if (product.Discount > 0)
+                        {
+                            <p class="text-danger fw-bold">
+                                @($"{product.Discount:0.00}")% OFF
+                            </p>
+                            <p>
+                                <span class="text-decoration-line-through text-muted">
+                                    $@(product.Price.HasValue ? $"{product.Price.Value:0.00}" : "N/A")
+                                </span>
+                                <span class="ms-2 text-success fw-bold">
+                                    $@(product.Price.HasValue ? $"{(product.Price.Value * (1 - product.Discount / 100)):0.00}" : "N/A")
+                                </span>
+                            </p>
+                        }
+                        else
+                        {
+                            <p class="fw-bold">
+                                $@(product.Price.HasValue ? $"{product.Price.Value:0.00}" : "N/A")
+                            </p>
+                        }
+                        <form method="get" asp-controller="Cart" asp-action="AddToCart">
+                            <input type="hidden" name="productId" value="@product.Id" />
+                            <button type="submit" class="btn btn-success btn-sm">
+                                <i class="bi bi-cart-plus"></i> Add to Cart
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </a>
+        </div>
+    }
+</div>

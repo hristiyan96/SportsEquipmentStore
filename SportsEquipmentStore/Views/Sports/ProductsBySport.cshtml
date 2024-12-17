@@ -1,0 +1,59 @@
+﻿@model IEnumerable<SportsEquipmentStore.Models.Product>
+
+<h1>Products for @ViewBag.SportCategory</h1>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-warning">No products available for @ViewBag.SportCategory.</div>
+}
+else
+{
+    <div class="row">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <!-- Product Image with Link to Details -->
+                    <a asp-controller="Sports" asp-action="Details" asp-route-id="@product.Id">
+                        <img src="@(!string.IsNullOrEmpty(product.ImageUrl) ? product.ImageUrl : "/images/default.jpg")"
+                             class="card-img-top" alt="@product.Name" />
+                    </a>
+
+                    <!-- Product Body -->
+                    <div class="card-body d-flex flex-column">
+                        <!-- Product Title with Link to Details -->
+                        <h5 class="card-title">
+                            <a asp-controller="Sports" asp-action="Details" asp-route-id="@product.Id" class="text-decoration-none">
+                                @product.Name
+                            </a>
+                        </h5>
+
+                        <p class="card-text text-muted">@product.Description</p>
+                        <p class="text-danger fw-bold">$@(product.Price?.ToString("F2") ?? "0.00")</p>
+
+                        <!-- Buttons Section -->
+                        <div class="mt-auto">
+                            <!-- Add to Favorites Button -->
+                            <form method="post" asp-controller="Favorite" asp-action="AddToFavorite" class="d-inline">
+                                <input type="hidden" name="productId" value="@product.Id" />
+                                <button type="submit" class="btn btn-outline-danger btn-sm">
+                                    <i class="bi bi-heart"></i> Add to Favorites
+                                </button>
+                            </form>
+
+                            <!-- Add to Cart Button -->
+                            <a asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@product.Id" class="btn btn-primary btn-sm">
+                                <i class="bi bi-cart"></i> Add to Cart
+                            </a>
+
+                            <!-- View Details Button -->
+                            <a asp-controller="Sports" asp-action="Details" asp-route-id="@product.Id" class="btn btn-outline-info btn-sm mt-1">
+                                <i class="bi bi-info-circle"></i> View Details
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}

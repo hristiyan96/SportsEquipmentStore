@@ -1,0 +1,108 @@
+﻿@{
+    var brandName = ViewData["BrandName"] as string;
+    ViewData["Title"] = $"{brandName} Collection";
+}
+
+<!-- Hero Section -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>@brandName - Here for You</h1>
+            <p class="lead">Explore the latest @brandName collections for Men, Women, and Kids.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation Tabs -->
+<ul class="nav nav-pills justify-content-center mb-4" id="brandTabs">
+    <li class="nav-item">
+        <a class="nav-link active" data-bs-toggle="pill" href="#men">Men</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#women">Women</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="pill" href="#kids">Kids</a>
+    </li>
+</ul>
+
+<!-- Tab Content -->
+<div class="tab-content">
+    <!-- Men Section -->
+    <div id="men" class="tab-pane fade show active">
+        <h2 class="mb-3">Men's Collection</h2>
+        <div class="row">
+            @for (int i = 1; i <= 3; i++)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Men Product @i">
+                        <div class="card-body">
+                            <h5 class="card-title">@brandName Men's Item @i</h5>
+                            <p class="card-text">Premium quality product from @brandName.</p>
+                            <p class="text-danger fw-bold">$99.99</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Women Section -->
+    <div id="women" class="tab-pane fade">
+        <h2 class="mb-3">Women's Collection</h2>
+        <div class="row">
+            @for (int i = 1; i <= 3; i++)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Women Product @i">
+                        <div class="card-body">
+                            <h5 class="card-title">@brandName Women's Item @i</h5>
+                            <p class="card-text">Stylish and comfortable apparel by @brandName.</p>
+                            <p class="text-danger fw-bold">$119.99</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- Kids Section -->
+    <div id="kids" class="tab-pane fade">
+        <h2 class="mb-3">Kids' Collection</h2>
+        <div class="row">
+            @for (int i = 1; i <= 3; i++)
+            {
+                <div class="col-md-4 mb-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Kids Product @i">
+                        <div class="card-body">
+                            <h5 class="card-title">@brandName Kids' Item @i</h5>
+                            <p class="card-text">Comfortable and fun styles for kids.</p>
+                            <p class="text-danger fw-bold">$59.99</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!-- Promotional Sections -->
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="bg-success text-white p-5 text-center">
+                <h3>New Collection</h3>
+                <p>Discover the latest @brandName arrivals.</p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-danger text-white p-5 text-center">
+                <h3>On Sale!</h3>
+                <p>Get your favorite @brandName products at discounted prices.</p>
+            </div>
+        </div>
+    </div>
+</div>

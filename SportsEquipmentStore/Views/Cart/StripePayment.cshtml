@@ -1,0 +1,30 @@
+﻿<form id="payment-form">
+    <div id="card-element"><!-- Stripe Card Element will appear here --></div>
+    <button id="submit" class="btn btn-success mt-3">Pay Now</button>
+    <p id="error-message" class="text-danger"></p>
+</form>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+    var stripe = Stripe('@ViewBag.PublishableKey');
+    var elements = stripe.elements();
+    var cardElement = elements.create('card');
+    cardElement.mount('#card-element');
+
+    var form = document.getElementById('payment-form');
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const { error, paymentIntent } = await stripe.confirmCardPayment('@ViewBag.ClientSecret', {
+            payment_method: {
+                card: cardElement
+            }
+        });
+
+        if (error) {
+            document.getElementById('error-message').textContent = error.message;
+        } else {
+            alert('Payment successful!');
+            window.location.href = '/Home/Index';
+        }
+    });
+</script>

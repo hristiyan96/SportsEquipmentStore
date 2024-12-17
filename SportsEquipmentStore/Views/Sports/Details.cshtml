@@ -1,0 +1,21 @@
+﻿@model SportsEquipmentStore.Models.Product
+
+@{
+    ViewData["Title"] = Model.Name;
+}
+
+<h1>@Model.Name</h1>
+<div class="row">
+    <div class="col-md-6">
+        <img src="@Model.ImageUrl" class="img-fluid" alt="@Model.Name" />
+    </div>
+    <div class="col-md-6">
+        <p><strong>Category:</strong> @Model.SportCategory</p>
+        <p><strong>Description:</strong> @Model.Description</p>
+        <p><strong>Price:</strong> $@Model.Price?.ToString("0.00")</p>
+        <a asp-controller="Cart" asp-action="AddToCart" asp-route-productId="@Model.Id" class="btn btn-primary">
+            Add to Cart
+        </a>
+        <a href="javascript:history.back()" class="btn btn-secondary">Back</a>
+    </div>
+</div>

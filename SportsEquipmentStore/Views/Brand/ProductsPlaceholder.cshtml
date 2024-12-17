@@ -1,0 +1,14 @@
+﻿@{
+    var brandName = ViewData["BrandName"] as string;
+    ViewData["Title"] = $"Products by {brandName}";
+}
+
+<h1>Products by @brandName</h1>
+
+<div class="alert alert-info">
+    <p>Currently, product data for <strong>@brandName</strong> is not available.</p>
+</div>
+
+<div class="text-center mt-4">
+    <a asp-action="Index" class="btn btn-secondary">Back to Brands</a>
+</div>
